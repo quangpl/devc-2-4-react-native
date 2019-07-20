@@ -1,0 +1,9 @@
+.hide {
+  display: none;
+}
+.title {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#fc00ff, #00dbde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
