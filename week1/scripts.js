@@ -43,7 +43,6 @@ function onCLickGuess() {
         resetGame();
         return true;
     }
-    addToPass(guess.value);
     savePass(guess.value);
     count--;
     limitCount.innerText = count;
@@ -90,20 +89,18 @@ function resetGame(){
     $("#low").addClass("d-none");
     $("#high").addClass("d-none");
     compare = getRandom(MIN, MAX);
+    guess.value = "";
     localStorage.setItem("pass", JSON.stringify([]))
 }
 
-function addToPass(val){
-    passGuess.unshift(val);
-    pass.innerText=passGuess;
-}
-
 function savePass(val){
-    let pass = JSON.parse(localStorage.getItem("pass"));
-    if(!pass){
-        pass = new Array();
+    let passInput = JSON.parse(localStorage.getItem("pass"));
+    if (!passInput){
+        passInput = new Array();
     }
-    pass.unshift(val)
-    localStorage.setItem("pass", JSON.stringify(pass))
+    console.log(passInput)
+    passInput.unshift(val)
+    pass.innerText = passInput;
+    localStorage.setItem("pass", JSON.stringify(passInput))
 }
 
