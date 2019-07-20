@@ -2,6 +2,7 @@ let btnGuess = document.getElementById("btn-guess");
 let guess = document.getElementById("guess");
 let low = document.getElementById("low");
 let pass = document.getElementById("pass");
+pass.innerText = JSON.parse(localStorage.getItem("pass"));
 let high = document.getElementById("high");
 let count = 10;
 let passGuess = new Array();
@@ -43,6 +44,7 @@ function onCLickGuess() {
         return true;
     }
     addToPass(guess.value);
+    savePass(guess.value);
     count--;
     limitCount.innerText = count;
     if (count === 0) {
@@ -88,10 +90,20 @@ function resetGame(){
     $("#low").addClass("d-none");
     $("#high").addClass("d-none");
     compare = getRandom(MIN, MAX);
+    localStorage.setItem("pass", JSON.stringify([]))
 }
 
 function addToPass(val){
     passGuess.unshift(val);
     pass.innerText=passGuess;
+}
+
+function savePass(val){
+    let pass = JSON.parse(localStorage.getItem("pass"));
+    if(!pass){
+        pass = new Array();
+    }
+    pass.unshift(val)
+    localStorage.setItem("pass", JSON.stringify(pass))
 }
 
