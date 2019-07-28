@@ -15,7 +15,7 @@ export default class AppInfo extends Component {
           />
         </View>
         <View style={styles.AppInfoRight}>
-          <Text style={styles.InfoName}>Sieu Thai</Text>
+          <Text style={styles.InfoName}>Le Quang</Text>
           <Text style={styles.InfoJob}>Developer</Text>
           <View style={styles.ButtonGroup}>
             <TouchableOpacity
@@ -46,7 +46,7 @@ export default class AppInfo extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 0.3,
+    flex: 0.25,
     color: "#fff",
     flexDirection: "row"
   },

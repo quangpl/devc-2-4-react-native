@@ -37,7 +37,7 @@ export default class AppPost extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 0.4,
+    flex: 0.35,
     flexDirection: "row",
     flexGrow: 1
   },

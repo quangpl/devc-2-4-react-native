@@ -4,7 +4,7 @@ import AppHeader from "./components/AppHeader";
 import AppInfo from "./components/AppInfo";
 import AppPost from "./components/AppPost";
 import AppStatics from "./components/AppStatics";
-
+import AppFooter from "./components/AppFooter";
 export default function App() {
   return (
     <View style={styles.container}>
@@ -12,6 +12,7 @@ export default function App() {
       <AppInfo />
       <AppStatics />
       <AppPost />
+      <AppFooter />
     </View>
   );
 }
