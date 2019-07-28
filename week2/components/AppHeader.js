@@ -6,10 +6,10 @@ export default class AppHeader extends Component {
     return (
       <View style={styles.container}>
         <View>
-          <Feather name="chevron-left" style={styles.icon} size={26} />
+          <Feather name="chevron-left" style={styles.icon} size={23} />
         </View>
         <View>
-          <Feather name="grid" style={styles.icon} size={26} />
+          <Feather name="grid" style={styles.icon} size={23} />
         </View>
       </View>
     );
