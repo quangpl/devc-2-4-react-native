@@ -34,6 +34,7 @@ Completed user stories:
 * [x]   Style  `follow button`  and  `send message button`  has shadow 
 * [x]  Layout header with  `Back button`  and  `Filter button`
 * [x]  Make button  `Follow`  and  `Send Message`  can press and alert  `followed`  when press follow button, alert  `message sended`  when press on  `send message button`
+* [x] Create beautiful Bottom tab layout using Flex + Vector icons
 
 **Walkthrough of all user stories:**
 ![enter image description here](https://media.giphy.com/media/Yn5hS635mH35EICxJH/giphy.gif)
