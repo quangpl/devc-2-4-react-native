@@ -11,7 +11,7 @@ export default class AppPost extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 0.4,
+    flex: 0.5,
     backgroundColor: "gray",
     color: "#fff"
   }

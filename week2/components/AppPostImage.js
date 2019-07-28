@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-export default class AppFooter extends Component {
+export default class AppPostImage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>AppFooter</Text>
+        <Text>AppPost</Text>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 0.1,
-    backgroundColor: "red",
+    flex: 0.5,
+    backgroundColor: "gray",
     color: "#fff"
   }
 });
