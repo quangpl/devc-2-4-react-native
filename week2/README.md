@@ -37,7 +37,8 @@ Completed user stories:
 * [x] Create beautiful Bottom tab layout using Flex + Vector icons
 
 **Walkthrough of all user stories:**
-![enter image description here](https://media.giphy.com/media/Yn5hS635mH35EICxJH/giphy.gif)
+
+![enter image description here](https://thumbs.gfycat.com/JointPlushCreature-size_restricted.gif)
 
 ## [](https://github.com/codepath/android-rottentomatoes-demo/blob/submission/README.md#libraries)Libraries
 
