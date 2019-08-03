@@ -16,6 +16,7 @@ export default class Footer extends Component {
       modal: false
     };
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -49,6 +50,28 @@ export default class Footer extends Component {
           <View style={{ marginTop: 22 }}>
             <View>
               <Text style={styles.title}>Your result :</Text>
+              <Text style={styles.result}>
+                Total: {this.props.summary.total}
+              </Text>
+              <Text style={styles.resultHighLight}>
+                Won: {this.props.summary.won}
+              </Text>
+              <Text style={styles.result}>Lose: {this.props.summary.lose}</Text>
+              <Text style={styles.resultHighLight}>
+                Tied: {this.props.summary.tied}
+              </Text>
+              <Text style={styles.result}>
+                Percent of Won:
+                {(this.props.summary.won * 100) / this.props.summary.total}
+              </Text>
+              <Text style={styles.resultHighLight}>
+                Percent of Lose:
+                {(this.props.summary.lose * 100) / this.props.summary.total}
+              </Text>
+              <Text style={styles.result}>
+                Percent of Tied:
+                {(this.props.summary.tied * 100) / this.props.summary.total}
+              </Text>
 
               <TouchableHighlight
                 onPress={() => {
@@ -57,7 +80,14 @@ export default class Footer extends Component {
                   });
                 }}
               >
-                <Text style={styles.buttonHide}>Hide Modal</Text>
+                <Text style={styles.buttonHide}>
+                  <Feather
+                    name="x-circle"
+                    size={32}
+                    color="green"
+                    style={styles}
+                  />
+                </Text>
               </TouchableHighlight>
             </View>
           </View>
@@ -93,6 +123,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   buttonHide: {
+    marginTop: 15,
     color: "red",
     fontWeight: "bold",
     fontSize: 18,
@@ -102,14 +133,21 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
     backgroundColor: "green",
-    fontSize: 22,
-    textAlign: "center",
+    fontSize: 35,
+    textAlign: "center"
   },
-  result:{
-
+  result: {
+    color: "#000",
+    backgroundColor: "#fff",
+    fontSize: 20,
+    height: 30,
+    textAlign: "center"
   },
-  resultHighLight:{
-
+  resultHighLight: {
+    color: "#000",
+    backgroundColor: "gray",
+    fontSize: 20,
+    height: 30,
+    textAlign: "center"
   }
-
 });

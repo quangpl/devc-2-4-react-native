@@ -11,11 +11,10 @@ export default class App extends Component {
       result: "",
       yourChoice: {},
       computerChoice: {},
-      summary: {
-        lose: 0,
-        win: 0,
-        tie: 0
-      }
+      lose: 0,
+      won: 0,
+      tied: 0,
+      total: 0
     };
   }
   onClickButton = val => {
@@ -28,16 +27,58 @@ export default class App extends Component {
     );
 
     if (val === "rock") {
-      result = computerChoice.value === "scissors" ? "Victory!" : "Defeat!";
+      if (computerChoice.value === "scissors") {
+        result = "Victory!";
+        this.setState({
+          won: this.state.won + 1,
+          total: this.state.total + 1
+        });
+      } else {
+        result = "Defeat!";
+        this.setState({
+          lose: this.state.lose + 1,
+          total: this.state.total + 1
+        });
+      }
     }
     if (val === "paper") {
-      result = computerChoice.value === "rock" ? "Victory!" : "Defeat!";
+      if (computerChoice.value === "rock") {
+        result = "Victory!";
+        this.setState({
+          won: this.state.won + 1,
+          total: this.state.total + 1
+        });
+      } else {
+        result = "Defeat!";
+        this.setState({
+          lose: this.state.lose + 1,
+          total: this.state.total + 1
+        });
+      }
     }
     if (val === "scissors") {
-      result = computerChoice.value === "paper" ? "Victory!" : "Defeat!";
+      if (computerChoice.value === "paper") {
+        result = "Victory!";
+        this.setState({
+          won: this.state.won + 1,
+          total: this.state.total + 1
+        });
+      } else {
+        result = "Defeat!";
+        this.setState({
+          lose: this.state.lose + 1,
+          total: this.state.total + 1
+        });
+      }
     }
 
-    if (val === computerChoice.value) result = "Tie game!";
+    if (val === computerChoice.value) {
+      result = "Tie game!";
+      this.setState({
+        tied: this.state.tied + 1,
+        total: this.state.total + 1
+      });
+    }
     this.setState({
       result,
       computerChoice,
@@ -48,6 +89,7 @@ export default class App extends Component {
       computerChoice,
       yourChoice
     });
+    console.log(this.state);
   };
   render() {
     return (
@@ -57,7 +99,15 @@ export default class App extends Component {
           <Player player="You" choice={this.state.yourChoice} />
           <Player player="Computer" choice={this.state.computerChoice} />
         </View>
-        <Footer onClickButton={this.onClickButton} />
+        <Footer
+          onClickButton={this.onClickButton}
+          summary={{
+            lose: this.state.lose,
+            won: this.state.won,
+            total: this.state.total,
+            tied: this.state.tied
+          }}
+        />
       </View>
     );
   }
