@@ -61,16 +61,25 @@ export default class Footer extends Component {
                 Tied: {this.props.summary.tied}
               </Text>
               <Text style={styles.result}>
-                Percent of Won:
-                {(this.props.summary.won * 100) / this.props.summary.total}
+                Percent of Won:  
+                {(
+                  (this.props.summary.won * 100) /
+                  this.props.summary.total
+                ).toFixed(2)}%
               </Text>
               <Text style={styles.resultHighLight}>
-                Percent of Lose:
-                {(this.props.summary.lose * 100) / this.props.summary.total}
+                Percent of Lose:  
+                {(
+                  (this.props.summary.lose * 100) /
+                  this.props.summary.total
+                ).toFixed(2)}%
               </Text>
               <Text style={styles.result}>
-                Percent of Tied:
-                {(this.props.summary.tied * 100) / this.props.summary.total}
+                Percent of Tied:  
+                {(
+                  (this.props.summary.tied * 100) /
+                  this.props.summary.total
+                ).toFixed(2)}%
               </Text>
 
               <TouchableHighlight
