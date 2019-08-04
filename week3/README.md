@@ -35,7 +35,8 @@ Completed user stories:
 -   [X] User can see the percentages of wins, losses, and tie games they've had.
 
 **Walkthrough of all user stories:**
-![enter image description here](https://imgur.com/zAXUKY0)
+
+ ![enter image description here](https://media.giphy.com/media/lPXIpkkC7BoEa63Khj/giphy.gif)
 
 ## [](https://github.com/codepath/android-rottentomatoes-demo/blob/submission/README.md#libraries)Libraries
 
